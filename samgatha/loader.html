@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <style>
+            body{
+                background-color: white;
+            }
+            .flip{
+                width: 200px;
+                height: 200px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -100px;
+                margin-left: -100px;
+                display: inline;
+            }
+            .flip #front{
+                position:absolute;                
+                -webkit-backface-visibility: hidden;
+                -o-backface-visibility: hidden;                
+                -moz-backface-visibility: hidden;
+                backface-visibility: hidden;
+                animation: IIITDM_rotate 4s linear 0s infinite normal;
+                -webkit-animation: IIITDM_rotate 4s linear 0s infinite normal;
+                -o-animation: IIITDM_rotate 4s linear 0s infinite normal;
+                -moz-animation: IIITDM_rotate 4s linear 0s infinite normal;
+            }
+            .flip #back{
+                position:absolute;
+                -webkit-backface-visibility: hidden;
+                -o-backface-visibility: hidden;
+                -moz-backface-visibility: hidden;
+                backface-visibility: hidden;
+                animation: samg_rotate 4s linear 0s infinite normal;
+                -webkit-animation: samg_rotate 4s linear 0s infinite normal;
+                -o-animation: samg_rotate 4s linear 0s infinite normal;
+                -moz-animation: samg_rotate 4s linear 0s infinite normal;
+
+            }
+            @keyframes IIITDM_rotate{
+                0%{transform: perspective( 600px ) rotateY( 0deg );}
+                25%{transform: perspective( 600px ) rotateY( -180deg );}
+                50%{transform: perspective( 600px ) rotateY( -360deg );}
+                75%{transform: perspective( 600px ) rotateY( -540deg );}
+                100%{transform: perspective( 600px ) rotateY( -720deg );}
+            }
+            
+            @keyframes samg_rotate{
+                0%{transform: perspective( 600px ) rotateY( 180deg );}
+                25%{transform: perspective( 600px ) rotateY( 0deg );}
+                50%{transform: perspective( 600px ) rotateY( -180deg );}   
+                750%{transform: perspective( 600px ) rotateY( -360deg );} 
+                100%{transform: perspective( 600px ) rotateY( -540deg );} 
+            }
+            -webkit-@keyframes IIITDM_rotate{
+                0%{-webkit-transform: perspective( 600px ) rotateY( 0deg );}
+                50%{-webkit-transform: perspective( 600px ) rotateY( -180deg );}
+                100%{-webkit-transform: perspective( 600px ) rotateY( -360deg );}
+            }
+            
+            -webkit-@keyframes samg_rotate{
+                0%{-webkit-transform: perspective( 600px ) rotateY( 180deg );}
+                50%{-webkit-transform: perspective( 600px ) rotateY( 0deg );}
+                100%{-webkit-transform: perspective( 600px ) rotateY( -180deg );}   
+            }
+            -o-@keyframes IIITDM_rotate{
+                0%{-o-transform: perspective( 600px ) rotateY( 0deg );}
+                50%{-o-transform: perspective( 600px ) rotateY( -180deg );}
+                100%{-o-transform: perspective( 600px ) rotateY( -360deg );}
+            }
+            
+            -o-@keyframes samg_rotate{
+                0%{-o-transform: perspective( 600px ) rotateY( 180deg );}
+                50%{-o-transform: perspective( 600px ) rotateY( 0deg );}
+                100%{-o-transform: perspective( 600px ) rotateY( -180deg );}   
+            }
+            -moz-@keyframes IIITDM_rotate{
+                0%{-moz-transform: perspective( 600px ) rotateY( 0deg );}
+                50%{-moz-transform: perspective( 600px ) rotateY( -180deg );}
+                100%{-moz-transform: perspective( 600px ) rotateY( -360deg );}
+            }
+            
+            -moz-@keyframes samg_rotate{
+                0%{-moz-transform: perspective( 600px ) rotateY( 180deg );}
+                50%{-moz-transform: perspective( 600px ) rotateY( 0deg );}
+                100%{-moz-transform: perspective( 600px ) rotateY( -180deg );}   
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="flip" onmouseenter="reverse_it()">
+            
+            <div id="back"><img src="assets_load/IIITDM-Kancheepuram-Logo.png" alt="IIITDM KANCHEEPURAM"></div>
+            <div id="front"><img src="assets_load/samg_final.png" alt="SAMGATHA 2017"></div>
+<!--
+            <div id="line"></div>
+            <div id="dot"></div>
+-->
+</div>  
+        
+    </body>
+</html>
